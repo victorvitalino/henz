@@ -1,0 +1,25 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= simple_form_for(@payment) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :value %>
+        <%= f.input :description %>
+        <%= f.input :status %>
+        <%= f.input :deadline %>
+        <%= f.association :provider %>
+        <%= f.association :payment_type %>
+      </div>
+
+     
+      <div class="form-actions">
+        <%= f.submit 'Salvar', class: 'btn btn-primary pull-right' %>
+
+        <%= link_to 'Cancelar', payments_path, class: 'btn btn-danger pull-left' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

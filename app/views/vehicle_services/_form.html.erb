@@ -1,0 +1,22 @@
+<div class="col-md-12">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= simple_form_for(@vehicle_service) do |f| %>
+      <%= f.error_notification %>
+
+      <div class="form-inputs">
+        <%= f.input :name %>
+        <%= f.input :description %>
+        <%= f.input :observation %>
+        <%= f.input :status %>
+      </div>
+
+        <div class="form-actions">
+        <%= f.submit 'Salvar', class: 'btn btn-primary pull-right' %>
+
+        <%= link_to 'Cancelar', vehicle_services_path, class: 'btn btn-danger pull-left' %>
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>

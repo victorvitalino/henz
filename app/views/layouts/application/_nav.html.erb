@@ -1,0 +1,30 @@
+<header class="header fixed-top clearfix">
+	<!--logo start-->
+	<div class="brand">
+		<%= link_to "<b>HENZ</b>".html_safe, application_root_path, class: 'logo' %>
+		<div class="sidebar-toggle-box">
+			<div class="fa fa-bars"></div>
+		</div>
+	</div>
+
+	<div class="top-nav clearfix">
+		<!--search & user info start-->
+		<ul class="nav pull-right top-menu">
+			
+			<li class="dropdown">
+				<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+					<img alt="" src="assets/images/avatar1_small.jpg">
+					<span class="username">John Doe</span>
+					<b class="caret"></b>
+				</a>
+				<ul class="dropdown-menu extended logout">
+					<li><%= link_to "<i class='fa fa-suitcase'></i>Meu Perfil".html_safe, application_root_path %></li>
+					<li><%= link_to "<i class='fa fa-key'></i>Sair".html_safe, application_root_path %></li>
+				</ul>
+			</li>
+			
+		</ul>
+
+
+	</div>
+</header>

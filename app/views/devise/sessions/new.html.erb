@@ -1,0 +1,29 @@
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+<div class="form-group form-group-default">
+	<%= f.label :email %>
+	<div class="controls">
+		<%= f.input :email, label: false,  required: false, autofocus: true %>
+		
+	</div>
+</div>
+<!-- END Form Control-->
+<!-- START Form Control-->
+<div class="form-group form-group-default">
+	<%= f.label :password %>
+	<div class="controls">
+		<%= f.input :password, label: false, required: false %>
+	</div>
+</div>
+<!-- START Form Control-->
+<div class="row">
+	<div class="col-md-6 no-padding">
+		<div class="checkbox ">
+			<%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
+		</div>
+	</div>
+	
+</div>
+<%= render "devise/shared/links" %>
+<%= f.submit "Entrar", class: 'btn btn-primary btn-cons m-t-10' %>
+
+<% end %>

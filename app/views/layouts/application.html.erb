@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Henz</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+	<%= csrf_meta_tags %>
+</head>
+<body=>
+
+	<div id="container">
+
+		<%= render 'layouts/application/nav' %>
+		<%= render 'layouts/application/side_bar' %>
+
+		<div id="main-content">
+			<div class="wrapper">
+				<%= yield %>
+			</div>
+		</div>
+	</div>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>

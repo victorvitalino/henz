@@ -1,0 +1,52 @@
+<div class="jumbotron"></div>
+<div class="container-fluid container-fixed-lg">
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+    <!-- START PANEL -->
+    <div class="panel ">
+      <div class="panel-heading">
+        <div class="panel-title">Listing Desk Supply</div>
+        <div class="pull-right m-b-10">
+          <%= link_to 'New Desk Supply', new_desk_supply_path, class:'btn btn-primary' %>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table table-hover table-condensed">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Telphone</th>
+                <th>Geolocation</th>
+                <th>City</th>
+                <th>State</th>
+                <th colspan="2">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @desk_supplies.each_with_index do |desk_supply,i| %>
+              <tr> 
+                <td><%= i+1 %></td>
+                <td><%= desk_supply.name %></td>
+                <td><%= desk_supply.address %></td>
+                <td><%= desk_supply.telphone %></td>
+                <td><%= desk_supply.geolocation %></td>
+                <td><%= desk_supply.city %></td>
+                <td><%= desk_supply.state %></td>
+                <td colspan="2">
+                 <%= link_to '<i class="fa fa-eye"></i>'.html_safe, desk_supply, class:'btn btn2 btn-complete' %>
+                 <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_desk_supply_path(desk_supply), class:'btn btn2 btn-warning' %>
+                 <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, desk_supply_path(desk_supply), class:'btn btn2 btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+               </tr>
+               <% end %>
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+

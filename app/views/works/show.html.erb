@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @work.name %>
+</p>
+
+<p>
+  <strong>Local:</strong>
+  <%= @work.local %>
+</p>
+
+<p>
+  <strong>Geolocation:</strong>
+  <%= @work.geolocation %>
+</p>
+
+<p>
+  <strong>Responsible:</strong>
+  <%= @work.responsible %>
+</p>
+
+<p>
+  <strong>Work type:</strong>
+  <%= @work.work_type %>
+</p>
+
+<p>
+  <strong>Affiliate:</strong>
+  <%= @work.affiliate %>
+</p>
+
+<%= link_to 'Edit', edit_work_path(@work) %> |
+<%= link_to 'Back', works_path %>

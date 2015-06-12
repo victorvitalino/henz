@@ -1,0 +1,49 @@
+<div class="jumbotron"></div>
+<div class="container-fluid container-fixed-lg">
+  <div class="row">
+    <p id="notice"><%= notice %></p>
+    <!-- START PANEL -->
+    <div class="panel ">
+      <div class="panel-heading">
+        <div class="panel-title">Listing Benefits</div>
+        <div class="pull-right m-b-10">
+          <%= link_to 'New Benefit', new_benefit_path, class:'btn btn-primary' %>
+        </div>
+      </div>
+      <div class="panel-body">
+        <div class="table-responsive">
+          <table class="table table-hover table-condensed">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Default value</th>
+                <th>Observation</th>
+                <th>Status</th>
+                <th colspan="2">Actions</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <% @benefits.each_with_index do |benefit,i| %>
+              <tr>
+                <td><%= i+1 %></td>                
+                <td><%= benefit.description %></td>
+                <td><%= benefit.default_value %></td>
+                <td><%= benefit.observation %></td>
+                <td><%= benefit.status %></td>
+                <td colspan="2">
+                 <%= link_to '<i class="fa fa-eye"></i>'.html_safe, benefit, class:'btn btn2 btn-complete' %>
+                 <%= link_to '<i class="fa fa-pencil-square-o"></i>'.html_safe, edit_benefit_path(benefit), class:'btn btn2 btn-warning' %>
+                 <%= link_to '<i class="fa fa-trash-o"></i>'.html_safe, benefit_path(benefit), class:'btn btn2 btn-danger', method: :delete, data: { confirm: 'Are you sure?' } %></td>
+               </tr>
+               <% end %>
+             </tbody>
+           </table>
+         </div>
+       </div>
+     </div>
+   </div>
+ </div>
+

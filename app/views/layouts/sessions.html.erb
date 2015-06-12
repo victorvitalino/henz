@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Henz</title>
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default">
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+
+	<%= csrf_meta_tags %>
+</head>
+<body=>
+
+	<div id="container">
+<%= simple_form_for(resource, as: resource_name, url: session_path(resource_name), html: { class: 'form-signin'}) do |f| %>	 
+        <h2 class="form-signin-heading">sign in now</h2>
+        <div class="login-wrap">
+            <div class="user-login-info">
+               <%= f.input :email, label: false,  required: false, autofocus: true %>
+                <%= f.input :password, label: false, required: false %>
+            </div>
+          
+            <button class="btn btn-lg btn-login btn-block" type="submit">Sign in</button>
+
+
+        </div>
+
+          <!-- Modal -->
+          <div aria-hidden="true" aria-labelledby="myModalLabel" role="dialog" tabindex="-1" id="myModal" class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                          <h4 class="modal-title">Forgot Password ?</h4>
+                      </div>
+                      <div class="modal-body">
+                          <p>Esqueci minha senha</p>
+                          <input type="text" name="email" placeholder="Email" autocomplete="off" class="form-control placeholder-no-fix">
+
+                      </div>
+                      <div class="modal-footer">
+                          <button data-dismiss="modal" class="btn btn-default" type="button">Cancel</button>
+                          <%= f.submit "Entrar", class: ' btn btn-success' %>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <!-- modal -->
+
+     <% end %>
+	</div>
+
+
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+</body>
+</html>

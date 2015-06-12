@@ -1,0 +1,4 @@
+pt-BR:
+ success: 'Operação realizada com sucesso!'
+ remove: 'Informação removida com sucesso!'
+ confirmation_remove: 'Tem certeza que deseja remover?'

@@ -1,0 +1,30 @@
+pt-BR:
+ activerecord:
+  errors:
+   models:
+    user:
+     attributes:
+      born:
+       not_a_date: 'Data inválida'
+  models:
+   user: 'funcionário'
+
+  attributes:
+   user:
+    name: 'nome'
+    email: 'e-mail'
+    password: 'senha'
+    password_confirmation: 'confirmação da Senha'
+    cpf: 'CPF'
+    born: 'nascimento'
+    code: 'matrícula'
+    sector: 'setor'
+    job: 'cargo'
+    job_function: 'função'
+    status: 'usuário ativo'
+    state: 'estado'
+    city: 'cidade'
+    address: 'endereço'
+    work: 'obra'
+    affiliate: 'afiliação'
+    

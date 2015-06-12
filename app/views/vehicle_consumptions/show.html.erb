@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Vehicle:</strong>
+  <%= @vehicle_consumption.vehicle %>
+</p>
+
+<p>
+  <strong>Km start:</strong>
+  <%= @vehicle_consumption.km_start %>
+</p>
+
+<p>
+  <strong>Km end:</strong>
+  <%= @vehicle_consumption.km_end %>
+</p>
+
+<p>
+  <strong>Gas liter:</strong>
+  <%= @vehicle_consumption.gas_liter %>
+</p>
+
+<p>
+  <strong>Value liter:</strong>
+  <%= @vehicle_consumption.value_liter %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @vehicle_consumption.date %>
+</p>
+
+<p>
+  <strong>Number notes:</strong>
+  <%= @vehicle_consumption.number_notes %>
+</p>
+
+<p>
+  <strong>Observation:</strong>
+  <%= @vehicle_consumption.observation %>
+</p>
+
+<p>
+  <strong>Desk supplie:</strong>
+  <%= @vehicle_consumption.desk_supplie %>
+</p>
+
+<p>
+  <strong>Driver:</strong>
+  <%= @vehicle_consumption.driver %>
+</p>
+
+<%= link_to 'Edit', edit_vehicle_consumption_path(@vehicle_consumption) %> |
+<%= link_to 'Back', vehicle_consumptions_path %>
