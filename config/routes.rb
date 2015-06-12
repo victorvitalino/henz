@@ -2,6 +2,8 @@ Rails.application.routes.draw do
 
 
   
+  resources :curriculums
+
   scope '/gestao' do 
   
     devise_for  :users, :path => '/', :controllers => {

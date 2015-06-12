@@ -32,7 +32,6 @@ group :development, :test do
   gem 'thin'
   gem 'byebug'
   gem 'web-console', '~> 2.0'
-  gem 'spring', '~>1.3.4'
   gem 'guard-livereload'
 end
 
