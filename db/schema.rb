@@ -183,12 +183,12 @@ ActiveRecord::Schema.define(version: 20150612180355) do
   end
 
   create_table "users", force: :cascade do |t|
-    t.string   "email",                  default: "", null: false
-    t.string   "encrypted_password",     default: "", null: false
+    t.string   "email",                  default: "",   null: false
+    t.string   "encrypted_password",     default: "",   null: false
     t.string   "reset_password_token"
     t.datetime "reset_password_sent_at"
     t.datetime "remember_created_at"
-    t.integer  "sign_in_count",          default: 0,  null: false
+    t.integer  "sign_in_count",          default: 0,    null: false
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
@@ -199,10 +199,11 @@ ActiveRecord::Schema.define(version: 20150612180355) do
     t.string   "job_function"
     t.integer  "sector_id"
     t.integer  "job_id"
-    t.boolean  "status"
+    t.boolean  "status",                 default: true
     t.text     "address"
     t.integer  "city_id"
     t.integer  "state_id"
+    t.string   "cep"
     t.integer  "foothold_id"
     t.integer  "affiliate_id"
     t.integer  "work_id"
