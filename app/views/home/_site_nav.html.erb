@@ -7,16 +7,22 @@
                     <nav class="b-top-nav f-top-nav b-right j-top-nav navbar-example" id="myNavbar">
                         <ul class="b-top-nav__1level_wrap">
                             <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="0">
-                                <a href="#home">Home</a>
-                            </li>
-                            <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="1">
-                                <a href="#slogan">Sobre Nós</a>
-                            </li>
-                            <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="2">
-                                <a href="#works">Trabalhos</a>
+                                <%= link_to 'Home', root_path() %>
                             </li>
                             <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="6">
-                                <a href="#map">Entre em Contato</a>
+                            <%= link_to 'Obras', obras_path() %>
+                            </li>
+                            <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="6">
+                                <%= link_to 'Trabalhe Conosco', trabalhe_conosco_path() %>
+                            </li>
+                            <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="6">
+                                <%= link_to 'Trajetoria', trajetoria_path() %>
+                            </li>
+                            <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="6">
+                                <%= link_to 'Áreas de Atuação', areas_atuacao_path() %>
+                            </li>
+                            <li class="b-top-nav__1level f-top-nav__1level f-primary-b" data-scroll-nav="6">
+                                <%= link_to 'Carreiras', carreiras_path() %>
                             </li>
                         </ul>
                     </nav>

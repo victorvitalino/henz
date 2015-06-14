@@ -46,4 +46,5 @@ Rails.application.routes.draw do
   get '/trajetoria',  to: 'home#trajetoria'
   get '/areas-atuacao',  to: 'home#areas-atuacao'
   get '/carreiras',  to: 'home#carreiras'
+  get '/obras', to: 'home#obras'
 end

@@ -56,10 +56,10 @@ jQuery(function ($) {
                 };
             }
             locations = [
-                {title: 'Henz 040', lat: -16.057101, long: -47.983844, icon: markerIcon},
-                {title: 'Henz Rio de Janeiro', lat: -22.6209208, long: -43.2853867, icon: markerIcon},
-                {title: 'Henz Alexania', lat: -16.092368, long: -48.493963, icon: markerIcon},
-                {title: 'Henz Ourinhos', lat: -22.9692739, long: -49.8656059, icon: markerIcon}
+                // {title: 'Henz 040', lat: -16.057101, long: -47.983844, icon: markerIcon},
+                {title: 'Henz Rio de Janeiro', lat: -22.6209208, long: -43.2853867, icon: markerIcon}
+                // {title: 'Henz Alexania', lat: -16.092368, long: -48.493963, icon: markerIcon},
+                // {title: 'Henz Ourinhos', lat: -22.9692739, long: -49.8656059, icon: markerIcon}
             ];
 
             function showHiddenLabel() {
