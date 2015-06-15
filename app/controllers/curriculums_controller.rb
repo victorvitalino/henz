@@ -1,6 +1,6 @@
 class CurriculumsController < ApplicationController
   before_action :set_curriculum, only: [:show, :edit, :update, :destroy]
-
+  layout 'home'
   # GET /curriculums
   def index
     @curriculums = Curriculum.all

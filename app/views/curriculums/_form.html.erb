@@ -2,13 +2,20 @@
   <%= f.error_notification %>
 
   <div class="form-inputs">
-    <%= f.input :name %>
-    <%= f.input :lastname %>
-    <%= f.input :email %>
-    <%= f.input :phone %>
-    <%= f.input :unit, as: 'select', collection: Curriculum.units.keys.to_a %>
-    <%= f.input :field, as: 'select', collection: Curriculum.fields.keys.to_a %>
-    <%= f.input :file, as: 'file' %>
+    <%= f.label :nome %>
+    <%= f.input :name, label: false %>
+    <%= f.label :sobrenome %>
+    <%= f.input :lastname, label: false  %>
+    <%= f.label :email %>
+    <%= f.input :email, label: false  %>
+    <%= f.label :telefone %>
+    <%= f.input :phone, label: false  %>
+    <%= f.label :unidade %>
+    <%= f.input :unit, as: 'select', collection: Curriculum.units.keys.to_a, label: false, prompt: 'selecione...' %>
+    <%= f.label 'Área de Atuação' %>
+    <%= f.input :field, as: 'select', collection: Curriculum.fields.keys.to_a, label: false, prompt: 'selecione...'  %>
+    <%= f.label 'Curriculum' %>
+    <%= f.input :file, as: 'file', label: false  %>
   </div>
 
   <div class="form-actions">

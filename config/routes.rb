@@ -2,15 +2,15 @@ Rails.application.routes.draw do
 
 
 
-  resources :curriculums
+  resources :curriculums, only: [:new, :create]
 
-  scope '/gestao' do 
+  scope '/gestao' do
 
     devise_for  :users, :path => '/', :controllers => {
       :sessions => 'sessions'
     }
 
-    authenticate :user do 
+    authenticate :user do
 
       root 'dashboard#index', as: 'application_root'
 

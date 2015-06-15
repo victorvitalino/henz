@@ -8,8 +8,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <%= render 'home/site_nav' %>
+  <div class="l-main-container">
 
-<%= yield %>
+          <%= yield %>
+  <%= render 'home/footer' %>
+</div>
   <%= javascript_include_tag 'home', 'data-turbolinks-track' => false %>
 </body>
 </html>
